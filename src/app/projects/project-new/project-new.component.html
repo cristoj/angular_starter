@@ -1,0 +1,34 @@
+<form #projectForm="ngForm"
+      novalidate>
+  <div>
+    <label>Project Name: </label>
+    <input type="text"
+           name="name"
+           [(ngModel)]="project.name"
+           required
+           minlength="4"
+           #nameControl="ngModel">
+    <span *ngIf="nameControl.invalid"> * </span>
+    <small *ngIf="nameControl.invalid && (nameControl.touched || nameControl.dirty)">
+      <span *ngIf="nameControl.errors['required']">We need a poject name.</span>
+      <span *ngIf="nameControl.errors['minlength']">Provide at least 4 chars.</span>
+    </small>
+  </div>
+  <div>
+    <label>Budget: </label>
+    <input type="number"
+           name="budget"
+           [(ngModel)]="project.budget"
+           min="100"
+           required
+           #budgetControl="ngModel">
+    <span *ngIf="budgetControl.invalid"> * </span>
+    <small *ngIf="budgetControl.invalid && (budgetControl.touched || budgetControl.dirty)">
+      <span *ngIf="budgetControl.errors['min']">Provide more than 100.</span>
+    </small>
+  </div>
+  <input type="submit"
+         value="Save"
+         [disabled]="projectForm.invalid"
+         (click)="onClick()">
+</form>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularBegins</title>
+  <base href="https://angularbuilders.github.io/angular-begins/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.280e991c5992f8630bc9.css"></head>
+<body>
+  <a-begins-root></a-begins-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+  <script>
+    ( function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if ( redirect && redirect != location.href ) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState( null, null, redirect );
+      }
+    } )();
+  </script>
+    <!-- /Github Pages hack. -->
+</body>
+<script src="runtime-es2015.c6f75f7f36ba4bb8f9b7.js" type="module"></script><script src="runtime-es5.c6f75f7f36ba4bb8f9b7.js" nomodule defer></script><script src="polyfills-es5.7d7d156430c9cd92193e.js" nomodule defer></script><script src="polyfills-es2015.79b5019f4dff069483c4.js" type="module"></script><script src="main-es2015.d1f6aacaf3a608fb1c41.js" type="module"></script><script src="main-es5.d1f6aacaf3a608fb1c41.js" nomodule defer></script></body>
+</html>

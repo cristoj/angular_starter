@@ -1,0 +1,3 @@
+<h4>Your current value in other currencies is:</h4>
+<pre *ngIf="currencies; else empty"> {{ currencies | json }}</pre>
+<ng-template #empty>Not yet converted</ng-template>

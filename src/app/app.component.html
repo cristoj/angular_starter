@@ -1,0 +1,17 @@
+<article>
+  <header>
+    <a-begins-top-bar
+      [title]="title"
+      [numProjects]="numProjects$ | async"
+    ></a-begins-top-bar>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <a-begins-legal-credits></a-begins-legal-credits>
+  </footer>
+</article>
+<aside *ngIf="httpError$ | async as httpError">
+  <pre> {{ httpError | json }} </pre>
+</aside>

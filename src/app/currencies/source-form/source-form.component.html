@@ -1,0 +1,12 @@
+<form>
+  <fieldset>
+    <label for="sourceAmount">How much do you want? </label>
+    <input id="sourceAmount"
+           name="sourceAmount"
+           [(ngModel)]="sourceAmount"
+           type="number">
+    <input type="button"
+           value="Convert"
+           (click)="emitConvert()" />
+  </fieldset>
+</form>
